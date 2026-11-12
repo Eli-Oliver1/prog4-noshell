@@ -1,17 +1,32 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="UTF-8">
-    <title>Prog 3: Rasterization Solution</title>
-    
-    <link type="text/css" rel="stylesheet" href="rasterize.css">
-
-    <script type="text/javascript" src="gl-matrix.js"></script>
-    <script type="text/javascript" src="rasterize.js"></script>
-  </head>
-
-  <body onload="main();">
-    <canvas id="myImageCanvas" width="512" height="512"></canvas>
-    <canvas id="myWebGLCanvas" width="512" height="512"></canvas> 
-  </body>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Program 4: Textured Transparency Renderer</title>
+  <link rel="stylesheet" href="rasterize.css">
+  <script defer src="gl-matrix.js"></script>
+  <script defer src="rasterize.js"></script>
+</head>
+<body>
+  <main class="viewer">
+    <canvas id="myImageCanvas" width="512" height="512" aria-label="Scene background"></canvas>
+    <canvas id="myWebGLCanvas" width="512" height="512" aria-label="WebGL rendered scene"></canvas>
+    <section class="hud" aria-live="polite">
+      <div class="eyebrow">NC State · Computer Graphics · Program 4</div>
+      <div id="status">Starting renderer…</div>
+      <div id="stats">Preparing scene</div>
+    </section>
+    <details class="help">
+      <summary>Controls</summary>
+      <div class="help-content">
+        <p><b>Texture / lighting</b>: B switches replace/modulate; N toggles lighting.</p>
+        <p><b>Transparency</b>: , cycles backward and . cycles forward through unsorted, painter, and BSP.</p>
+        <p><b>Part 8</b>: press ! for the Interdimensional Garden; press 0 to return.</p>
+        <p><b>Camera</b>: A/D, W/S, Q/E move; hold Shift to rotate the view. Esc resets the view.</p>
+        <p><b>Models</b>: ←/→ select triangle sets; ↑/↓ select ellipsoids. K/; L/O I/P move; hold Shift to rotate. Backspace resets model transforms; Space clears selection.</p>
+      </div>
+    </details>
+  </main>
+</body>
 </html>
